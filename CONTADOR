@@ -1,3 +1,6 @@
+int contador = 0;
+int boton = 9;
+int estado;
 int z = 1;
 int a = 2;
 int b = 3;
@@ -9,6 +12,8 @@ int g = 8;
 
 void setup()
 {
+  Serial.begin(9600);
+  pinMode(boton, INPUT);
   pinMode(z, OUTPUT);
   pinMode(a, OUTPUT);
   pinMode(b, OUTPUT);
@@ -21,36 +26,65 @@ void setup()
 
 void loop()
 {
-  apagado();
-  cero();
-  delay(1000);
-  apagado();
-  uno();
-  delay(1000);
-  apagado();
-  dos();
-  delay(1000);
-  apagado();
-  tres();
-  delay(1000);
-  apagado();
-  cuatro();
-  delay(1000);
-  apagado();
-  cinco();
-  delay(1000);
-  apagado();
-  seis();
-  delay(1000);
-  apagado();
-  siete();
-  delay(1000);
-  apagado();
-  ocho();
-  delay(1000);
-  apagado();
-  nueve();
-  delay(1000);
+  estado = digitalRead(boton);
+  Serial.println(estado);
+  if(estado == 1){
+    contador++;
+  }
+  if(contador == 0){
+  	apagado();
+    cero();
+    delay(100);
+  }
+  if(contador == 1){
+    apagado();
+    uno();
+    delay(100);
+  }
+  if(contador == 2){
+    apagado();
+    dos();
+    delay(100);
+  }
+  if(contador == 3){
+    apagado();
+    tres();
+    delay(100);
+  }
+  if(contador == 4){
+    apagado();
+    cuatro();
+    delay(100);
+  }
+  if(contador == 5){
+    apagado();
+    cinco();
+    delay(100);
+  }
+  if(contador == 6){
+    apagado();
+    seis();
+    delay(100);
+  }
+  if(contador == 7){
+    apagado();
+    siete();
+    delay(100);
+  }
+  if(contador == 8){
+    apagado();
+    ocho();
+    delay(100);
+  }
+  if(contador == 9){
+    apagado();
+    nueve();
+    delay(100);
+  }
+  if(contador > 9){
+    apagado();
+    contador = 0;
+  }
 }
 
 void apagado(){
