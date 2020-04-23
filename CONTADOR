@@ -1,0 +1,142 @@
+int z = 1;
+int a = 2;
+int b = 3;
+int c = 4;
+int d = 5;
+int e = 6;
+int f = 7;
+int g = 8;
+
+void setup()
+{
+  pinMode(z, OUTPUT);
+  pinMode(a, OUTPUT);
+  pinMode(b, OUTPUT);
+  pinMode(c, OUTPUT);
+  pinMode(d, OUTPUT);
+  pinMode(e, OUTPUT);
+  pinMode(f, OUTPUT);
+  pinMode(g, OUTPUT);
+}
+
+void loop()
+{
+  apagado();
+  cero();
+  delay(1000);
+  apagado();
+  uno();
+  delay(1000);
+  apagado();
+  dos();
+  delay(1000);
+  apagado();
+  tres();
+  delay(1000);
+  apagado();
+  cuatro();
+  delay(1000);
+  apagado();
+  cinco();
+  delay(1000);
+  apagado();
+  seis();
+  delay(1000);
+  apagado();
+  siete();
+  delay(1000);
+  apagado();
+  ocho();
+  delay(1000);
+  apagado();
+  nueve();
+  delay(1000);
+}
+
+void apagado(){
+   digitalWrite(a, LOW);
+   digitalWrite(b, LOW);
+   digitalWrite(c, LOW);
+   digitalWrite(d, LOW);
+   digitalWrite(e, LOW);
+   digitalWrite(f, LOW);
+   digitalWrite(g, LOW);
+}
+
+void cero(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(f, HIGH);
+}
+
+void uno(){
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+}
+
+void dos(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(g, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(d, HIGH);
+}
+
+void tres(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(g, HIGH);
+}
+
+void cuatro(){
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+}
+
+void cinco(){
+  digitalWrite(a, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+}
+
+void seis(){
+  digitalWrite(a, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(c, HIGH);
+}
+
+void siete(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+}
+
+void ocho(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+}
+
+void nueve(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+}
